@@ -24,3 +24,4 @@ Integrantes:
 	Franco Agustin Raggio
 	Martin Sebastian Tito Gira
 	Fernando Luciano Cucchiarelli
+	Ever Maximiliano Pippino
