@@ -23,3 +23,4 @@ Grupo 4
 Integrantes:
 	Franco Agustin Raggio
 	Martin Sebastian Tito Gira
+	Fernando Luciano Cucchiarelli
