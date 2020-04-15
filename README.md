@@ -19,7 +19,7 @@ Aplicación utilizada en la cursada 2020 de Ingenieria de Software. UTN-FRLP
 
 `npm start`
 
-Grupo 4
+Grupo 2
 Integrantes:
 	Franco Agustin Raggio
 	Martin Sebastian Tito Gira
