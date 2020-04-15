@@ -21,4 +21,5 @@ Aplicación utilizada en la cursada 2020 de Ingenieria de Software. UTN-FRLP
 
 Grupo 4
 Integrantes:
+	Franco Agustin Raggio
 	Martin Sebastian Tito Gira
