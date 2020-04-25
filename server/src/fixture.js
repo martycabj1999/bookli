@@ -11,6 +11,7 @@ const initBooks = () => {
                 isbn: '9788499089515',
                 genres: ['Cuentos', 'Fantástico'],
                 authors: ['Jorge Luis Borges'],
+                country: 'Argentina',
                 cover: '/assets/el-aleph.jpg'
             })
         )
@@ -23,6 +24,7 @@ const initBooks = () => {
                 isbn: '9789505153527',
                 genres: ['No ficción'],
                 authors: ['Rodolfo Walsh'],
+                country: 'Argentina',
                 cover: '/assets/operacion-masacre.jpg'
             })
         )
@@ -35,6 +37,7 @@ const initBooks = () => {
                 isbn: '9780201616224',
                 genres: ['Educación', 'Tecnología', 'Programación'],
                 authors: ['David Thomas', 'Andrew Hunt'],
+                country: 'Estados Unidos',
                 cover: '/assets/pragmatic-programmer.jpg'
             })
         )
@@ -47,6 +50,7 @@ const initBooks = () => {
                 isbn: '9780735619678',
                 genres: ['Educación', 'Tecnología', 'Programación'],
                 authors: ['Steve McConnell'],
+                country: 'Estados Unidos',
                 cover: '/assets/code-complete.jpg'
             })
         )
@@ -59,6 +63,7 @@ const initBooks = () => {
                 isbn: '9780486474915',
                 genres: ['Policial', 'Cuentos'],
                 authors: ['Sir Arthur Conan Doyle'],
+                country: 'Reino Unido',
                 cover: '/assets/sherlock.jpg'
             })
         )
@@ -71,6 +76,7 @@ const initBooks = () => {
                 isbn: '9781328869333',
                 genres: ['Ciencia ficción', 'Novela'],
                 authors: ['George Orwell'],
+                country: 'Reino Unido',
                 cover: '/assets/1984.jpg'
             })
         )
@@ -83,6 +89,7 @@ const initBooks = () => {
                 isbn: '9781541276727',
                 genres: ['Ficción distópica', 'Novela'],
                 authors: ['Franz Kafka'],
+                country: 'Alemania',
                 cover: '/assets/trial.jpg'
             })
         )
@@ -95,6 +102,7 @@ const initBooks = () => {
                 isbn: '9781451673319',
                 genres: ['Ciencia ficción', 'Novela'],
                 authors: ['Ray Bradbury'],
+                country: 'Estados Unidos',
                 cover: '/assets/fahrenheit.jpg'
             })
         )
@@ -107,6 +115,7 @@ const initBooks = () => {
                 isbn: '9780486264783',
                 genres: ['Comedia', 'Teatro'],
                 authors: ['Oscar Wilde'],
+                country: 'Inglaterra',
                 cover: '/assets/earnest.jpg'
             })
         )
@@ -119,6 +128,7 @@ const initBooks = () => {
                 isbn: '9780451526342',
                 genres: ['Sátira', 'Novela'],
                 authors: ['George Orwell'],
+                country: 'Inglaterra',
                 cover: '/assets/animal-farm.jpg'
             })
         )
