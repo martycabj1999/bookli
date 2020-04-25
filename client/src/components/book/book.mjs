@@ -7,6 +7,7 @@ export default {
         synopsis: String,
         year: Number,
         publisher: String,
+        country: String,
         genres: String
     }
 }

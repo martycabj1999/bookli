@@ -32,6 +32,10 @@ const Book = db.define('Book', {
 		type: Sequelize.JSON,
 		allowNull: false
 	},
+	country: {
+		type: Sequelize.STRING,
+		allowNull: false
+	},
 	cover: {
 		type: Sequelize.STRING
 	}
