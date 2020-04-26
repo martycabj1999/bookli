@@ -1,0 +1,98 @@
+.book {
+    display: grid;
+    grid-template-rows: minmax(180px, auto) 1fr;
+    grid-template-columns: 150px 1fr;
+    grid-template-areas:
+        'cover header'
+        'body body'
+        'action action';
+
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.book-link {
+    all: unset;
+}
+
+.book.book--full {
+    cursor: auto;
+    height: auto;
+}
+
+.book.book--full .book__cover {
+    margin: var(--space-2);
+}
+
+.book__cover {
+    grid-area: cover;
+    overflow: hidden;
+    margin: var(--space-2) 0 0 var(--space-2);
+}
+
+.book__cover img {
+    max-width: 100%;
+}
+
+.book__header {
+    grid-area: header;
+    margin: var(--space-2);
+}
+
+.book__title {
+    font-size: var(--text-xxl);
+}
+
+.book__author {
+    font-size: var(--text-s);
+    color: var(--gray-2);
+}
+
+.book__body {
+    grid-area: body;
+    color: var(--gray-3);
+    margin: var(--space-2);
+    overflow: auto;
+}
+
+.book__actions {
+    grid-area: action;
+    margin: var(--space-2);
+}
+
+.book__extra-info {
+    margin-top: var(--space-5);
+}
+
+@media (min-width: 640px) {
+    .book {
+        height: 300px;
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 250px 1fr;
+        grid-template-areas:
+            'cover header'
+            'cover body'
+            'action action';
+    }
+
+    .book__cover {
+        margin: 0;
+        /*repetimos el borde porque en ocaciones las imagenes son mas chicas*/
+        /*que el contenedor*/
+        border-bottom-left-radius: var(--radius);
+        border-top-left-radius: var(--radius);
+    }
+
+    .book__cover img {
+        max-width: 100%;
+        max-height: unset;
+
+        border-bottom-left-radius: var(--radius);
+        border-top-left-radius: var(--radius);
+    }
+}
+
+.highlight {
+    display: inline-block;
+    border-bottom: 2px dotted var(--primary);
+}

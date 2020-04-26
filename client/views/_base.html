@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta
+            name="description"
+            content="El mejor sitio para buscar y encontrar tu proximos libro."
+        />
+
+        <link rel="icon" href="/assets/logo.svg" type="image/x-icon" />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/booklist.css" />
+        <link rel="stylesheet" href="/css/book.css" />
+        <title>Bookli</title>
+    </head>
+    <body class="app-layout">
+        <header class="header">
+            <div class="brand">
+                <img
+                    class="brand__logo"
+                    src="/assets/logo.svg"
+                    alt="bookli logo"
+                />
+                <span class="brand__name">Bookli</span>
+            </div>
+
+            {% block search %} {% endblock %}
+        </header>
+
+        <main class="main" data-ref="main">
+            {% block main %} {% endblock %}
+        </main>
+
+        <script src="https://mozilla.github.io/nunjucks/files/nunjucks-slim.min.js"></script>
+        {% block js %} {% endblock %}
+    </body>
+</html>

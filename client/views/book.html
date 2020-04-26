@@ -1,0 +1,52 @@
+<div class="card book {{ 'book--full' if detail }}">
+    <div class="book__cover">
+        <img src="{{book.cover}}" alt="book cover" />
+    </div>
+
+    <div class="book__header">
+        <p class="book__title">{{ book.title }}</p>
+        <p class="book__author">por {{ book.authors | join(', ') }}</p>
+    </div>
+    <div class="book__body">
+        <p class="book__synopsis">{{ book.synopsis }}</p>
+
+        {% if detail %}
+        <div class="book__extra-info">
+            <p>
+                Se publicó en el año
+                <span class="highlight">{{ book.year }}</span> por la editorial
+                <span class="highlight">{{ book.publisher }}</span>.
+            </p>
+            <p>
+                La primera edición se realizo en
+                <span class="highlight">{{ book.country }}</span>.
+            </p>
+            <p>
+                Es un libro perteneciente a los géneros
+                <span class="highlight"></span>.
+            </p>
+        </div>
+        {% endif %}
+    </div>
+
+    {% if detail %}
+    <div class="book__actions">
+        {% if book.status == 'AVAILABLE' %}
+        <button class="btn btn-primary" data-ref="addToList">
+            Empezar a leer
+        </button>
+        {% endif %} {% if book.status == 'READING' %}
+        <button class="btn btn-warning" data-ref="removeFromList">
+            Dejar de leer
+        </button>
+        <button class="btn btn-success" data-ref="addToFinish">
+            Lo termine!
+        </button>
+        {% endif %} {% if book.status == 'FINISHED' %}
+        <button class="btn btn-danger" data-ref="removeFromFinish">
+            Volver a leer
+        </button>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
