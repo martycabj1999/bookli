@@ -31,22 +31,24 @@
 
     {% if detail %}
     <div class="book__actions">
+        <a href="/">
+            <button class="btn btn-success">
+                Volver
+            </button>
+        </a>
         {% if book.status == 'AVAILABLE' %}
         <button class="btn btn-primary" data-ref="addToList">
             Empezar a leer
-        </button>
-        {% endif %} {% if book.status == 'READING' %}
+        </button> {% endif %} {% if book.status == 'READING' %}
         <button class="btn btn-warning" data-ref="removeFromList">
             Dejar de leer
         </button>
         <button class="btn btn-success" data-ref="addToFinish">
             Lo termine!
-        </button>
-        {% endif %} {% if book.status == 'FINISHED' %}
+        </button> {% endif %} {% if book.status == 'FINISHED' %}
         <button class="btn btn-danger" data-ref="removeFromFinish">
             Volver a leer
-        </button>
-        {% endif %}
+        </button> {% endif %}
     </div>
     {% endif %}
 </div>
