@@ -4,8 +4,8 @@ Aplicación utilizada en la cursada 2020 de Ingenieria de Software. UTN-FRLP
 
 ## Dependencias
 
- - node > v10
- - express > v4
+-   node > v10
+-   express > v4
 
 ## Instalar dependencias
 

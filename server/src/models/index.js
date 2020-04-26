@@ -6,11 +6,11 @@ async function createTables() {
 
 async function dropTables() {
     BookModel.Book.destroy({
-        where: {}
+        where: {},
     });
 }
 
 module.exports = {
     createTables,
-    dropTables
-}
+    dropTables,
+};

@@ -1,21 +1,27 @@
 .book {
-    background: var(--white);
-    box-shadow: var(--shadow);
     display: grid;
-    grid-template-rows: 180px 1fr;
+    grid-template-rows: minmax(180px, auto) 1fr;
     grid-template-columns: 150px 1fr;
     grid-template-areas:
-        "cover header"
-        "body body";
+        'cover header'
+        'body body'
+        'action action';
 
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    transition: opacity .3s;
+    transition: opacity 0.3s;
     cursor: pointer;
 }
 
-.book:not(.book.book--full):hover {
-    opacity: 0.7;
+.book-link {
+    all: unset;
+}
+
+.book.book--full {
+    cursor: auto;
+    height: auto;
+}
+
+.book.book--full .book__cover {
+    margin: var(--space-2);
 }
 
 .book__cover {
@@ -34,11 +40,11 @@
 }
 
 .book__title {
-    font-size: var(--text-xl);
+    font-size: var(--text-xxl);
 }
 
 .book__author {
-    font-size: var(--text-sm);
+    font-size: var(--text-s);
     color: var(--gray-2);
 }
 
@@ -49,13 +55,13 @@
     overflow: auto;
 }
 
-.book__extra-info {
-    display: none;
-    margin-top: var(--space-5);
+.book__actions {
+    grid-area: action;
+    margin: var(--space-2);
 }
 
-.book--full .book__extra-info {
-    display: block;
+.book__extra-info {
+    margin-top: var(--space-5);
 }
 
 @media (min-width: 640px) {
@@ -64,12 +70,15 @@
         grid-template-rows: 1fr 2fr;
         grid-template-columns: 250px 1fr;
         grid-template-areas:
-            "cover header"
-            "cover body";
+            'cover header'
+            'cover body'
+            'action action';
     }
 
     .book__cover {
         margin: 0;
+        /*repetimos el borde porque en ocaciones las imagenes son mas chicas*/
+        /*que el contenedor*/
         border-bottom-left-radius: var(--radius);
         border-top-left-radius: var(--radius);
     }
@@ -77,6 +86,9 @@
     .book__cover img {
         max-width: 100%;
         max-height: unset;
+
+        border-bottom-left-radius: var(--radius);
+        border-top-left-radius: var(--radius);
     }
 }
 
