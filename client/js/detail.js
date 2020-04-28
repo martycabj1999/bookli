@@ -49,6 +49,13 @@ async function addToFinishList() {
     renderBook(state.book);
 }
 
+async function removeFromFinish() {
+    await bookService.startBook(state.book.id);
+    state.book = await bookService.get(state.book.id);
+
+    renderBook(state.book);
+}
+
 /**
  * Actualiza la UI
  **/
@@ -75,7 +82,7 @@ function renderBook(book) {
     }
 
     if (book.status === 'FINISHED') {
-        bookRefs.removeFromFinish.addEventListener('click', null);
+        bookRefs.removeFromFinish.addEventListener('click', removeFromFinish);
     }
 }
 
