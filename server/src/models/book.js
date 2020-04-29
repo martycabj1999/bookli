@@ -66,6 +66,10 @@ const Book = db.define(
             allowNull: false,
             values: [AVAILABLE, READING, FINISHED],
         },
+        value: {
+            type: Sequelize.STRING,
+            allowNull: true,
+        }
     },
     { tableName: 'Book' }
 );
