@@ -37,6 +37,7 @@ async function finishBook(id) {
     const resp = await fetch(`${BASE_URL}/books/${id}/finish`, {
         method: 'PUT',
     });
+    console.log(resp);
     return resp;
 }
 

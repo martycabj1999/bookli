@@ -181,7 +181,7 @@ const finishBook = (id) => {
             if (book.status !== READING) {
                 return book;
             }
-            return book.update({ status: FINISHED });
+            return book.update({ status: FINISHED, value: book.value });
         }
         return null;
     });
