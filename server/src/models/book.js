@@ -66,6 +66,10 @@ const Book = db.define(
             allowNull: false,
             values: [AVAILABLE, READING, FINISHED],
         },
+        value: {
+            type: Sequelize.STRING,
+            allowNull: true,
+        }
     },
     { tableName: 'Book' }
 );
@@ -177,7 +181,26 @@ const finishBook = (id) => {
             if (book.status !== READING) {
                 return book;
             }
-            return book.update({ status: FINISHED });
+            return book.update({ status: FINISHED});
+        }
+        return null;
+    });
+};
+/**
+ * Cambiar el estado de un libro a FINISHED (terminado) sólo si su estado es READING (leyendo).
+ * Parámetro id: id a buscar en la base de datos.
+ *
+ */
+const valueBook = (id, value) => {
+    return Book.findOne({ where: { id: id } }).then((book) => {
+        if (book != null) {
+            if (book.status === READING) {
+                
+                console.log('model !== READING', id, value);
+                return book;
+            }
+            console.log('model === READING', id, value);
+            return book.update({ value: value });
         }
         return null;
     });
@@ -191,6 +214,7 @@ const BookModel = {
     get: getBook,
     start: startBook,
     makeAvailable: makeBookAvailable,
+    value: valueBook,
     finish: finishBook,
 };
 

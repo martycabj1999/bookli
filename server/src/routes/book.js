@@ -104,5 +104,31 @@ router.put('/:id/finish', function (req, res) {
         })
         .catch(() => res.status(500).send('Error al obtener libro'));
 });
+/**
+ * Endpoint para cambiar el valor de un libro al ser finalizado.
+ * Recibe el id en req.params.id
+ *
+ */
+router.put('/:id/value/:value', function (req, res) {
+    BookModel.value(req.params.id, req.params.value)
+        .then((book) => {
+            if (book == null) {
+                res.status(404).send(
+                    'El libro ' + req.params.id + ' no fue encontrado'
+                );
+            } else {
+                if (book.status !== BookModel.status.FINISHED) {
+                    res.status(400).send(
+                        'El libro ' +
+                            req.params.id +
+                            ' no está en la lista de lectura'
+                    );
+                } else {
+                    res.status(200).send(book);
+                }
+            }
+        })
+        .catch(() => res.status(500).send('Error al obtener libro'));
+});
 
 module.exports = router;

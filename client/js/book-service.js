@@ -33,10 +33,19 @@ async function makeBookAvailable(id) {
     return resp;
 }
 
+async function valueBook(id, value) {
+    const resp = await fetch(`${BASE_URL}/books/${id}/value/${value}`, {
+        method: 'PUT',
+    });
+    console.log('value', resp);
+    return resp;
+}
+
 async function finishBook(id) {
     const resp = await fetch(`${BASE_URL}/books/${id}/finish`, {
         method: 'PUT',
     });
+    console.log('finish', resp);
     return resp;
 }
 
@@ -46,5 +55,6 @@ export default {
     search,
     startBook,
     finishBook,
+    valueBook,
     makeBookAvailable,
 };
