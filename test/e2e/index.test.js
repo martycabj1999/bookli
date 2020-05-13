@@ -159,4 +159,23 @@ describe('Detail view', () => {
             .element('.book__actions [data-ref=removeFromFinish]')
             .text.to.equal('Volver a leer');
     });
+
+    test('Deberia agregar opacidad en la card, al pasar el mouse por encima de esa cards de la lista de libros disponibles', browser => {
+
+        browser
+            .url(BASE_URL)
+            .waitForElementVisible('body')
+            .waitForElementVisible('.booklist')
+            .moveToElement(
+            'body > main > div > div.books-container > div > a:nth-child(1)',
+            10,
+            10,
+            )
+            .assert.cssProperty(
+                'body > main > div > div.books-container > div > a:nth-child(1)',
+                'opacity',
+                '0.5'
+            );
+
+    });
 });
