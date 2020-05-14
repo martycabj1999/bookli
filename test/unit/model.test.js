@@ -14,6 +14,7 @@ test('Crear libro', async () => {
         isbn: '9788499089515',
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
+        country:'argentina',
         cover: '/assets/el-aleph.jpg',
     };
 
@@ -34,6 +35,7 @@ test('Crear libro sin título', async () => {
         isbn: '9780201616224',
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
+        country:'argentina',
         cover: '/assets/pragmatic-programmer.jpg',
     };
 
@@ -54,6 +56,7 @@ test('Obtener un libro', async () => {
         isbn: '9780201616224',
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
+        country:'argentina',
         cover: '/assets/pragmatic-programmer.jpg',
     };
 
@@ -77,6 +80,7 @@ test('Obtener un libro inexistente', async () => {
         isbn: '9780201616224',
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
+        country:'argentina',
         cover: '/assets/pragmatic-programmer.jpg',
     };
 
@@ -99,6 +103,7 @@ test('Obtener todos los libros', async () => {
         isbn: '9780201616224',
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
+        country:'argentina',
         cover: '/assets/pragmatic-programmer.jpg',
     };
 
@@ -111,6 +116,7 @@ test('Obtener todos los libros', async () => {
         isbn: '9788499089515',
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
+        country:'argentina',
         cover: '/assets/el-aleph.jpg',
     };
 
@@ -137,6 +143,7 @@ test('Buscar libros', async () => {
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
         cover: '/assets/pragmatic-programmer.jpg',
+        country:'argentina',
     };
 
     const secondBookData = {
@@ -148,6 +155,7 @@ test('Buscar libros', async () => {
         isbn: '9788499089515',
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
+        country:'argentina',
         cover: '/assets/el-aleph.jpg',
     };
 
@@ -172,6 +180,7 @@ test('Buscar libros sin resultado', async () => {
         isbn: '9780201616224',
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
+        country:'argentina',
         cover: '/assets/pragmatic-programmer.jpg',
     };
 
@@ -184,6 +193,7 @@ test('Buscar libros sin resultado', async () => {
         isbn: '9788499089515',
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
+        country:'argentina',
         cover: '/assets/el-aleph.jpg',
     };
 
@@ -207,6 +217,7 @@ test('Buscar libros con varios resultados', async () => {
         isbn: '9780201616224',
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
+        country:'argentina',
         cover: '/assets/pragmatic-programmer.jpg',
     };
 
@@ -220,6 +231,7 @@ test('Buscar libros con varios resultados', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
     };
 
     // Creamos los libros
@@ -242,6 +254,7 @@ test('Agregar un libro a la lista de lectura', async () => {
         isbn: '9780201616224',
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
+        country:'argentina',
         cover: '/assets/pragmatic-programmer.jpg',
     };
 
@@ -270,6 +283,7 @@ test('Agregar un libro inexistente a la lista de lectura', async () => {
         isbn: '9780201616224',
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
+        country:'argentina',
         cover: '/assets/pragmatic-programmer.jpg',
     };
 
@@ -295,6 +309,7 @@ test('Obtener libros de la lista de lectura', async () => {
         isbn: '9780201616224',
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
+        country:'argentina',
         cover: '/assets/pragmatic-programmer.jpg',
     };
 
@@ -324,6 +339,7 @@ test('Obtener lista de lectura vacía', async () => {
         isbn: '9780201616224',
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
+        country:'argentina',
         cover: '/assets/pragmatic-programmer.jpg',
     };
 
@@ -348,6 +364,7 @@ test('Poner disponible un libro nuevamente', async () => {
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
         cover: '/assets/pragmatic-programmer.jpg',
+        country:'argentina',
         status: BookModels.status.READING,
     };
 
@@ -374,6 +391,7 @@ test('Poner disponible un libro en estado terminado', async () => {
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
         cover: '/assets/pragmatic-programmer.jpg',
+        country:'argentina',
         status: BookModels.status.FINISHED,
     };
 
@@ -398,6 +416,7 @@ test('Finalizar un libro', async () => {
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
         cover: '/assets/pragmatic-programmer.jpg',
+        country:'argentina',
         status: BookModels.status.READING,
     };
 
@@ -424,6 +443,7 @@ test('Finalizar un libro en estado disponible', async () => {
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
         cover: '/assets/pragmatic-programmer.jpg',
+        country:'argentina',
     };
 
     // Creamos el libro
