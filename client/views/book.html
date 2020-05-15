@@ -48,7 +48,21 @@
         </button> {% endif %} {% if book.status == 'FINISHED' %}
         <button class="btn btn-danger" data-ref="removeFromFinish">
             Volver a leer
-        </button> {% endif %}
+        </button>
+        <div>
+            <label> Valoracion del libro: </label>
+            <select class="btn btn-primary" id="idValue">
+                <option value="">Seleccione una valorizacion</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            <br>
+            <h5>El valor del libro es: {{ book.value }}</h5>
+        </div>
+        {% endif %}
     </div>
     {% endif %}
 </div>
