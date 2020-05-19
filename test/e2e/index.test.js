@@ -178,6 +178,7 @@ describe('Detail view', () => {
             );
 
     });
+
     test('Verifica que el boton de volver te lleve al HOME', browser => {
         browser
             .url(BASE_URL + '/detail/1')
@@ -190,5 +191,17 @@ describe('Detail view', () => {
             
         browser
         .click('.book__actions > a > button')
+    });
+
+    test('Verifica que el pais este en el detalle del libro', browser => {
+        browser
+            .url(BASE_URL + '/detail/1')
+            .waitForElementVisible('body')
+            .waitForElementVisible('.book__extra-info');
+
+        browser.expect
+            .element('.book__extra-info > h4')
+            .text.to.equal('La primera edición se realizo en Argentina.');
+            
     });
 });
