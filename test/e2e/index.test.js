@@ -159,4 +159,49 @@ describe('Detail view', () => {
             .element('.book__actions [data-ref=removeFromFinish]')
             .text.to.equal('Volver a leer');
     });
+
+    test('Deberia agregar opacidad en la card, al pasar el mouse por encima de esa cards de la lista de libros disponibles', browser => {
+
+        browser
+            .url(BASE_URL)
+            .waitForElementVisible('body')
+            .waitForElementVisible('.booklist')
+            .moveToElement(
+            'body > main > div > div.books-container > div > a:nth-child(1)',
+            10,
+            10,
+            )
+            .assert.cssProperty(
+                'body > main > div > div.books-container > div > a:nth-child(1)',
+                'opacity',
+                '0.5'
+            );
+
+    });
+
+    test('Verifica que el boton de volver te lleve al HOME', browser => {
+        browser
+            .url(BASE_URL + '/detail/1')
+            .waitForElementVisible('body')
+            .waitForElementVisible('.book__actions');
+
+        browser.expect
+            .element('.book__actions > a > button')
+            .text.to.equal('Volver');
+            
+        browser
+        .click('.book__actions > a > button')
+    });
+
+    test('Verifica que el pais este en el detalle del libro', browser => {
+        browser
+            .url(BASE_URL + '/detail/1')
+            .waitForElementVisible('body')
+            .waitForElementVisible('.book__extra-info');
+
+        browser.expect
+            .element('.book__extra-info > h4')
+            .text.to.equal('La primera edición se realizo en Argentina.');
+            
+    });
 });

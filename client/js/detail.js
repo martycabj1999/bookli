@@ -49,6 +49,22 @@ async function addToFinishList() {
     renderBook(state.book);
 }
 
+async function removeFromFinish() {
+    await bookService.startBook(state.book.id);
+    state.book = await bookService.get(state.book.id);
+
+    renderBook(state.book);
+}
+
+async function valueBook() {
+    var select = document.getElementById("idValue"); //El <select>/
+    await bookService.valueBook(state.book.id, select.value);
+    state.book = await bookService.get(state.book.id, select.value);
+    console.log('value', select.value)
+    console.log('state.book', state.book)
+    renderBook(state.book);
+}
+
 /**
  * Actualiza la UI
  **/
@@ -75,7 +91,11 @@ function renderBook(book) {
     }
 
     if (book.status === 'FINISHED') {
-        bookRefs.removeFromFinish.addEventListener('click', null);
+        bookRefs.removeFromFinish.addEventListener('click', removeFromFinish);
+    }
+    if (book.status === 'FINISHED') {
+        let select = document.getElementById('idValue');
+        select.addEventListener('change', valueBook);
     }
 }
 

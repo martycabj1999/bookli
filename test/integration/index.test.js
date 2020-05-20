@@ -37,6 +37,7 @@ test('Obtener libros por api', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
     };
 
     // Creamos el libro
@@ -60,6 +61,7 @@ test('Buscar libros por api con un resultado', async () => {
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
         cover: '/assets/pragmatic-programmer.jpg',
+        country:'argentina',
     };
 
     const secondBookData = {
@@ -72,6 +74,7 @@ test('Buscar libros por api con un resultado', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
     };
 
     // Creamos los libros
@@ -97,6 +100,7 @@ test('Buscar libros por api sin ningún resultado', async () => {
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
         cover: '/assets/pragmatic-programmer.jpg',
+        country:'argentina',
     };
 
     const secondBookData = {
@@ -109,6 +113,7 @@ test('Buscar libros por api sin ningún resultado', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
     };
 
     // Creamos los libros
@@ -133,6 +138,7 @@ test('Buscar libros por api con más de un resultado', async () => {
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
         cover: '/assets/pragmatic-programmer.jpg',
+        country:'argentina',
     };
 
     const secondBookData = {
@@ -145,6 +151,7 @@ test('Buscar libros por api con más de un resultado', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
     };
 
     // Creamos los libros
@@ -177,6 +184,7 @@ test('Obtener un libro por api', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
     };
 
     // Creamos el libro
@@ -200,6 +208,7 @@ test('Agregar un libro a la lista de lectura por api', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
     };
 
     // Creamos el libro
@@ -235,6 +244,7 @@ test('Obtener libros de la lista de lectura por api', async () => {
         genres: ['Educación', 'Tecnología', 'Programación'],
         authors: ['David Thomas', 'Andrew Hunt'],
         cover: '/assets/pragmatic-programmer.jpg',
+        country:'argentina',
         status: BookModels.status.READING,
     };
 
@@ -248,6 +258,7 @@ test('Obtener libros de la lista de lectura por api', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
     };
 
     // Creamos los libros
@@ -276,6 +287,7 @@ test('Remover un libro de la lista de lectura por api', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
         status: BookModels.status.READING,
     };
 
@@ -307,6 +319,7 @@ test('Remover un libro terminado de la lista de lectura por api', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
         status: BookModels.status.FINISHED,
     };
 
@@ -335,6 +348,7 @@ test('Finalizar un libro por api', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
         status: BookModels.status.READING,
     };
 
@@ -366,6 +380,7 @@ test('Finalizar un libro disponible por api', async () => {
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
     };
 
     // Creamos el libro

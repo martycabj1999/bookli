@@ -15,6 +15,10 @@
     all: unset;
 }
 
+.book-link:hover{
+    opacity: 0.5;
+}
+
 .book.book--full {
     cursor: auto;
     height: auto;
@@ -34,9 +38,9 @@
     max-width: 100%;
 }
 
-.book__cover:hover img {
+/*.book__cover:hover img {
     opacity: 0.5;
-}
+}*/
 
 .book__header {
     grid-area: header;
