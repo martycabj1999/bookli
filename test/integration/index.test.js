@@ -409,6 +409,7 @@ test('Al obtener un libro por API, el campo de géneros sea un array no vacío',
         genres: ['Cuentos', 'Fantástico'],
         authors: ['Jorge Luis Borges'],
         cover: '/assets/el-aleph.jpg',
+        country:'argentina',
     };
 
     // Creamos el libro
