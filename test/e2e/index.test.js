@@ -92,6 +92,18 @@ describe('Detail view', () => {
             .text.to.equal('Empezar a leer');
     });
 
+    test('Deberia mostrar en el boton del buscador un placeholder', browser => {
+        browser
+            .url(BASE_URL)
+            .waitForElementVisible('body')
+            .waitForElementVisible('body > header > div.search')
+            .assert.attributeContains(
+                'body > header > div.search > input',
+                'placeholder',
+                'Buscar...'
+            );
+    });
+
     test('Deberia mostrar boton para remover libro de la lista de lectura si el libro es parte de la lista de lectura', browser => {
         browser
             .url(BASE_URL + '/detail/1')
