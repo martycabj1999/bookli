@@ -30,6 +30,19 @@ describe('Home Test', () => {
             .assert.titleContains('Bookli');
     });
 
+    test('El logo de la pagina deberia redireccionar a la pagina principal', browser => {
+        browser
+            .url(BASE_URL)
+            .waitForElementVisible('body')
+            .waitForElementVisible('.brand__name')
+
+            .assert.attributeContains(
+                '.brand__name a',
+                'href',
+                '/'
+            );
+            }); 
+
     test('Deberia mostrar el logo de Bookli', browser => {
         browser
             .url(BASE_URL)
@@ -159,4 +172,6 @@ describe('Detail view', () => {
             .element('.book__actions [data-ref=removeFromFinish]')
             .text.to.equal('Volver a leer');
     });
+
+   
 });
