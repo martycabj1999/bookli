@@ -105,6 +105,18 @@ describe('Detail view', () => {
             .text.to.equal('Empezar a leer');
     });
 
+    test('Deberia mostrar en el boton del buscador un placeholder', browser => {
+        browser
+            .url(BASE_URL)
+            .waitForElementVisible('body')
+            .waitForElementVisible('body > header > div.search')
+            .assert.attributeContains(
+                'body > header > div.search > input',
+                'placeholder',
+                'Buscar...'
+            );
+    });
+
     test('Deberia mostrar boton para remover libro de la lista de lectura si el libro es parte de la lista de lectura', browser => {
         browser
             .url(BASE_URL + '/detail/1')
@@ -190,5 +202,31 @@ describe('Detail view', () => {
                 '0.5'
             );
 
+    });
+
+    test('Verifica que el boton de volver te lleve al HOME', browser => {
+        browser
+            .url(BASE_URL + '/detail/1')
+            .waitForElementVisible('body')
+            .waitForElementVisible('.book__actions');
+
+        browser.expect
+            .element('.book__actions > a > button')
+            .text.to.equal('Volver');
+            
+        browser
+        .click('.book__actions > a > button')
+    });
+
+    test('Verifica que el pais este en el detalle del libro', browser => {
+        browser
+            .url(BASE_URL + '/detail/1')
+            .waitForElementVisible('body')
+            .waitForElementVisible('.book__extra-info');
+
+        browser.expect
+            .element('.book__extra-info > h4')
+            .text.to.equal('La primera edición se realizo en Argentina.');
+            
     });
 });
