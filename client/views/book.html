@@ -31,12 +31,9 @@
 
     {% if detail %}
     <div class="book__actions">
-        <a href="/">
-            <button class="btn btn-success">
-                Volver
-            </button>
-        </a>
-        {% if book.status == 'AVAILABLE' %}
+        <button class="btn btn-danger" id="backHome">
+            <a href="/" style="text-decoration: none; color:red"> Volver</a> 
+        </button> {% if book.status == 'AVAILABLE' %}
         <button class="btn btn-primary" data-ref="addToList">
             Empezar a leer
         </button> {% endif %} {% if book.status == 'READING' %}

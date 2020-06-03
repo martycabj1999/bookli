@@ -206,16 +206,13 @@ describe('Detail view', () => {
 
     test('Verifica que el boton de volver te lleve al HOME', browser => {
         browser
-            .url(BASE_URL + '/detail/1')
-            .waitForElementVisible('body')
-            .waitForElementVisible('.book__actions');
-
-        browser.expect
-            .element('.book__actions > a > button')
-            .text.to.equal('Volver');
-            
-        browser
-        .click('.book__actions > a > button')
+        .url(BASE_URL + '/detail/1')
+        .waitForElementVisible('body')
+        .waitForElementVisible('#backHome > a:nth-child(1)')
+        .click('#backHome > a:nth-child(1)')
+        .pause(400);
+    
+        browser.expect.url().to.equal(BASE_URL + '/');
     });
 
     test('Verifica que el pais este en el detalle del libro', browser => {
