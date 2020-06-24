@@ -22,6 +22,7 @@
     --white: #fff;
     --bg: #f4f5f7;
     --border: #cbd5e0;
+    --border-card: #28a745;
     --primary: #35b2d3;
     --primary-dark: #1c687d;
     --primary-light: #abdeed;
@@ -140,7 +141,7 @@ p {
 .card {
     background: var(--white);
     box-shadow: var(--shadow);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-card);
     border-radius: var(--radius);
 }
 
