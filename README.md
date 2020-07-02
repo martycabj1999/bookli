@@ -18,3 +18,6 @@ Aplicación utilizada en la cursada 2020 de Ingenieria de Software. UTN-FRLP
 ## Iniciar la app en modo producción
 
 `npm start`
+
+## Version 1.2.1
+Soluciones HOTFIX de ultimo momento, aplicando borde a las cards
