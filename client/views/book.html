@@ -4,7 +4,7 @@
     </div>
 
     <div class="book__header">
-        <p class="book__title">{{ book.title }}</p>
+        <p class="book__title">{{ book.title }}</p>        
         <p class="book__author">por {{ book.authors | join(', ') }}</p>
     </div>
     <div class="book__body">
@@ -12,6 +12,7 @@
 
         {% if detail %}
         <div class="book__extra-info">
+            <p class="highlight">ISBN: {{ book.isbn }}</p>
             <p>
                 Se publicó en el año
                 <span class="highlight">{{ book.year }}</span> por la editorial
