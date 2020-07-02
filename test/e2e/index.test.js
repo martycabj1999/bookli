@@ -248,4 +248,16 @@ describe('Detail view', () => {
         browser.expect.element('.book__actions [data-ref=removeFromList]').text.to.equal('Dejar de leer');
         browser.expect.element('.book__actions [data-ref=addToFinish]').text.to.equal('Lo termine!');
     });
+
+    test('Verifica que el ISBN este en el detalle del libro', browser => {
+        browser
+            .url(BASE_URL + '/detail/1')
+            .waitForElementVisible('body')
+            .waitForElementVisible('.book__extra-info');
+
+        browser.expect
+            .element(".book__extra-info > .isbn")
+            .text.to.equal('ISBN:9788499089515');
+            
+    });
 });
