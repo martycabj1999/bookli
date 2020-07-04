@@ -20,6 +20,9 @@ async function searchBooks(searchTerm) {
     const books = await bookService.search(state.searchTerm, state.status);
 
     state.books = books;
+    console.log(state.books.length)
+    const label=document.getElementById("label-libros");
+    label.innerHTML="Hay "+state.books.length+ " libros";
     renderBooks(state);
 }
 

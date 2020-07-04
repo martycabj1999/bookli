@@ -248,4 +248,8 @@ describe('Detail view', () => {
         browser.expect.element('.book__actions [data-ref=removeFromList]').text.to.equal('Dejar de leer');
         browser.expect.element('.book__actions [data-ref=addToFinish]').text.to.equal('Lo termine!');
     });
+
+    test('Deberia mostrar la cantidad de libros que hay en cada seccion', browser => {
+        
+    })
 });
