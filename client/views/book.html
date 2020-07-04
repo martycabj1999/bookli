@@ -12,6 +12,9 @@
 
         {% if detail %}
         <div class="book__extra-info">
+            <div class="isbn">
+                <p>ISBN: {{ book.isbn }}</p>
+            </div>
             <p>
                 Se publicó en el año
                 <span class="highlight">{{ book.year }}</span> por la editorial
