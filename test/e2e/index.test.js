@@ -250,6 +250,14 @@ describe('Detail view', () => {
     });
 
     test('Deberia mostrar la cantidad de libros que hay en cada seccion', browser => {
-        
+        browser
+        .url(BASE_URL)
+        .waitForElementVisible('body')
+        .waitForElementVisible('body > main > div > div.filters-container')
+            .assert.attributeContains(
+                'body > main > div > div.filters-container > p',
+                'id',
+                'label-libros'
+            );
     })
 });
