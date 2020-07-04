@@ -260,4 +260,16 @@ describe('Detail view', () => {
             .text.to.equal('ISBN:9788499089515');
             
     });
+
+    test('Verifica que el boton de Comprar me redireccione a Amazon ', browser => {
+        browser
+        .url(BASE_URL)
+        .waitForElementVisible('body')
+        .waitForElementVisible('#comprar')
+        .click('#comprar')
+        .pause(400);
+    
+        browser.expect.url().to.equal("https://www.amazon.com/s?k=libros&i=stripbooks-intl-ship&__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2");
+    });
+
 });
