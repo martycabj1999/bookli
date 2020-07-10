@@ -268,8 +268,8 @@ describe('Detail view', () => {
             .waitForElementVisible('.book__extra-info');
 
         browser.expect
-            .element(".book__extra-info > .isbn")
-            .text.to.equal('ISBN:9788499089515');
+            .element(".book__extra-info > .isbn > .book-isbn")
+            .text.to.equal('ISBN: 9788499089515');
             
     });
 
